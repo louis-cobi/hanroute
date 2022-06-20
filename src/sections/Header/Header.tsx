@@ -1,25 +1,27 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import ThemeIcon from '@mui/icons-material/InvertColors';
-import MenuIcon from '@mui/icons-material/Menu';
-import Alert from '@mui/material/Alert';
-import AlertTitle from '@mui/material/AlertTitle';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Toolbar from '@mui/material/Toolbar';
-import Tooltip from '@mui/material/Tooltip';
+import GitHubIcon from "@mui/icons-material/GitHub";
+import ThemeIcon from "@mui/icons-material/InvertColors";
+import MenuIcon from "@mui/icons-material/Menu";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Divider from "@mui/material/Divider";
+import IconButton from "@mui/material/IconButton";
+import Toolbar from "@mui/material/Toolbar";
+import Tooltip from "@mui/material/Tooltip";
+import Paper from '@mui/material/Paper';
 
-import { FlexBox } from '@/components/styled';
-import { repository, title } from '@/config';
-import useHotKeysDialog from '@/store/hotkeys';
-import useNotifications from '@/store/notifications';
-import useSidebar from '@/store/sidebar';
-import useTheme from '@/store/theme';
 
-import { HotKeysButton } from './styled';
-import { getRandomJoke } from './utils';
+import { FlexBox } from "@/components/styled";
+import { repository, title } from "@/config";
+import useHotKeysDialog from "@/store/hotkeys";
+import useNotifications from "@/store/notifications";
+import useSidebar from "@/store/sidebar";
+import useTheme from "@/store/theme";
+
+import { HotKeysButton } from "./styled";
+import { getRandomJoke } from "./utils";
 
 function Header() {
   const [, sidebarActions] = useSidebar();
@@ -49,9 +51,9 @@ function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar color="transparent" elevation={1} position="static">
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <FlexBox sx={{ alignItems: 'center' }}>
+      <AppBar color="transparent" elevation={2} position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
+          <FlexBox sx={{ alignItems: "center" }}>
             <IconButton
               onClick={sidebarActions.toggle}
               size="large"
@@ -81,13 +83,24 @@ function Header() {
             </FlexBox>
             <Divider orientation="vertical" flexItem />
             <Tooltip title="It's open source" arrow>
-              <IconButton color="info" size="large" component="a" href={repository} target="_blank">
+              <IconButton
+                color="info"
+                size="large"
+                component="a"
+                href={repository}
+                target="_blank"
+              >
                 <GitHubIcon />
               </IconButton>
             </Tooltip>
             <Divider orientation="vertical" flexItem />
             <Tooltip title="Switch theme" arrow>
-              <IconButton color="info" edge="end" size="large" onClick={themeActions.toggle}>
+              <IconButton
+                color="info"
+                edge="end"
+                size="large"
+                onClick={themeActions.toggle}
+              >
                 <ThemeIcon />
               </IconButton>
             </Tooltip>
