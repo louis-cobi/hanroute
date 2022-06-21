@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 100px;
+}
+
+.dices {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+}
