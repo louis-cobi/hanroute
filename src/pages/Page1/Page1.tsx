@@ -1,39 +1,53 @@
 import { useState } from "react";
 import Typography from "@mui/material/Typography";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import Meta from "@/components/Meta";
 import { FullSizeCenteredFlexBox } from "@/components/styled";
 import TextField from "@mui/material/TextField";
-
-
+import Vocal from "@untemps/react-vocal";
+import { useVocal } from "@untemps/react-vocal";
 
 function Page1() {
   function useInput() {
     const [value, setValue] = useState("");
-    const formTheme =  createTheme ( {
+    const formTheme = createTheme({
       palette: {
-        text:{
-          primary: 'rgba(255,255,255,0)',
-        }
-      }
-    })
+        text: {
+          primary: "rgba(255,255,255,0)",
+        },
+      },
+    });
+
+  const _onVocalStart = () => {
+    setValue("");
+  };
+
+  const _onVocalResult = (value) => {
+    setValue(value);
+  };
+
+  const [, { start, subscribe }] = useVocal("fr_FR");
     const input = (
       <ThemeProvider theme={formTheme}>
-      <TextField
-        id="standard-basic"
-        label=""
-        variant="standard"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
+        <TextField
+          id="standard-basic"
+          label=""
+          variant="standard"
+          onChange={(e) => setValue(e.target.value)}
+          defaultValue={value}
+        />
+        <Vocal
+          onStart={_onVocalStart}
+          onResult={_onVocalResult}
+          style={{ width: 40, position: "absolute", right: 10, top: 20 }}
+          lang={"fr-FR"}
+        />
       </ThemeProvider>
     );
     return [value, input];
   }
   const [answer, setAnswer] = useInput();
-
-  const ariaLabel = {'bgcolor': "#ECBF41" } as const
 
   return (
     <>
