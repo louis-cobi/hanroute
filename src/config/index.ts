@@ -2,7 +2,7 @@ import isMobile from '@/utils/is-mobile';
 
 import type { Notifications } from './types';
 
-const title = 'React PWA';
+const title = 'hanroute';
 
 const email = 'auther-email@gmail.com';
 
@@ -27,12 +27,12 @@ const messages = {
   404: 'Hey bro? What are you looking for?',
 };
 
-const dateFormat = 'MMMM DD, YYYY';
+const dateFormat = 'DD MMMM, YYYY';
 
 const notifications: Notifications = {
   options: {
     anchorOrigin: {
-      vertical: 'bottom',
+      vertical: 'top',
       horizontal: 'left',
     },
     autoHideDuration: 6000,
