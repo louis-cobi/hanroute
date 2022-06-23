@@ -4,21 +4,21 @@ import './styles.css';
 
 function Page2() {
   const dice1 = [
-    'https://imagizer.imageshack.com/img923/2142/7TcyCy.png',
-    'https://imagizer.imageshack.com/img923/1822/ST7vEp.png',
-    'https://imagizer.imageshack.com/img924/7038/jQWboH.png',
-    'https://imagizer.imageshack.com/img922/3003/wEsmUK.png',
-    'https://imagizer.imageshack.com/img924/3087/bJNg7v.png',
-    'https://imagizer.imageshack.com/img922/9082/GMPtl4.png',
+    'https://imagizer.imageshack.com/img924/6879/eWIpv1.png',
+    'https://imagizer.imageshack.com/img922/4978/s2ia6h.png',
+    'https://imagizer.imageshack.com/img924/3272/tJuCNx.png',
+    'https://imagizer.imageshack.com/img924/874/t1ka0P.png',
+    'https://imagizer.imageshack.com/img922/3693/y59RYa.png',
+    'https://imagizer.imageshack.com/img924/1553/pUVEKy.png',
   ];
 
   const dice2 = [
-    'https://imagizer.imageshack.com/img922/162/r9xIoH.png',
-    'https://imagizer.imageshack.com/img924/3162/GqMt6O.png',
-    'https://imagizer.imageshack.com/img923/3193/iQUCll.png',
-    'https://imagizer.imageshack.com/img924/9185/4LOkfJ.png',
-    'https://imagizer.imageshack.com/img923/9311/EriXlK.png',
-    'https://imagizer.imageshack.com/img922/1740/opwOil.png',
+    'https://imagizer.imageshack.com/img924/627/Zpvkzu.png',
+    'https://imagizer.imageshack.com/img922/6488/fNsGnH.png',
+    'https://imagizer.imageshack.com/img922/1416/dK6R6G.png',
+    'https://imagizer.imageshack.com/img924/2202/GdrAFx.png',
+    'https://imagizer.imageshack.com/img923/1008/7SqY6O.png',
+    'https://imagizer.imageshack.com/img922/2210/SbTyPp.png',
   ];
 
   return (
