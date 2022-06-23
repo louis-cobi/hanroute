@@ -32,21 +32,21 @@ function Header() {
         <BottomNavigationAction
           label="Programme"
           icon={<CalendarTodayOutlinedIcon />}
-          to={"/page-1"}
+          to={"/page-3"}
           component={Link}
           value="Programme"
         />
         <BottomNavigationAction
           label="Mes notes"
           icon={<CreateOutlinedIcon />}
-          to={"/page-2"}
+          to={"/page-1"}
           component={Link}
           value="Notes"
         />
         <BottomNavigationAction
           label="Mon profil"
           icon={<AccountCircleOutlinedIcon />}
-          to={"/page-3"}
+          to={"/page-4"}
           component={Link}
           value="Profil"
         />

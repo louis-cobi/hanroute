@@ -46,6 +46,9 @@ const themes: Record<Themes, ThemeOptions> = {
       primary: {
         main: '#3f51b5',
       },
+      secondary: {
+        main: '#9F4672',
+      },
       color:{
         title:'#223F67',
       },

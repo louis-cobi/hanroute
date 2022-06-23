@@ -1,5 +1,15 @@
 import Dice from 'react-dice-roll';
 
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import CloseIcon from '@mui/icons-material/Close';
+
+import Meta from '@/components/Meta';
+import { Link } from "react-router-dom";
+
 import './styles.css';
 
 function Page2() {
@@ -22,17 +32,38 @@ function Page2() {
   ];
 
   return (
-    <div className="App">
-      <h1>Dés virtuels des questions</h1>
-      <div className="dices">
-        <div className="diceOne">
-          <Dice size={200} faces={dice1} />
-        </div>
-        <div className="diceTwo">
-          <Dice size={200} faces={dice2} />
-        </div>
-      </div>
-    </div>
+    <>
+      <Typography variant="h5" color="#223F67" fontWeight="900" fontSize="44px"  sx={{m:"4vh 0 5vh 5vw"}}>
+        DÉS VIRTUELS
+      </Typography>
+      <Meta title="iceBreaker" />
+      <Paper elevation={3} sx={{ borderRadius: '30px 30px 0px 0px', height:"90vh" }}>
+        <Box to={"/page-3"}
+          component={Link}>
+          <CloseIcon sx={{mt:"2vh", ml:"2vw"}}/>
+        </Box>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', pt:"15vh"}}>
+            <Grid item sm={10}>
+              <div className="App">
+                <div className="dices">
+                  <div className="diceOne">
+                    <Dice size={200} faces={dice1} />
+                  </div>
+                  <div className="diceTwo">
+                    <Dice size={200} faces={dice2} />
+                  </div>
+                </div>
+              </div>
+              <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt:"25vh"}}>
+                <Button variant="contained" color='secondary' sx={{ borderRadius: "50px", width: "40vw", height: "5vh", fontSize: "1.4rem" }} to={"/page-3"}
+                component={Link}>FINIR LA SÉANCE</Button>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Box>
+      </Paper>
+    </>
   );
 }
 
