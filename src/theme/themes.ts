@@ -40,11 +40,14 @@ const themes: Record<Themes, ThemeOptions> = {
     palette: {
       mode: 'light',
       background: {
-        default: '#fafafa',
+        default: 'rgba(236, 191, 65, 0.7)',
         paper: '#fff',
       },
       primary: {
         main: '#3f51b5',
+      },
+      color:{
+        title:'#223F67',
       },
       form:{
         text:{primary:'#fff',}
